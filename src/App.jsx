@@ -10,6 +10,7 @@ import Team from './Component/Team/Team'
 import Startups from './Component/Startups/Startups'
 import Events from './Component/Events/Events'
 import Contact from './Component/Contact/Contact'
+import JoinNowPage from './Component/JoinNowPage/JoinNowPage'
 
 import Developers from './Component/Developers/Developers'
 
@@ -39,6 +40,7 @@ function App() {
             <Route path="/startups" element={<Startups />} />
             <Route path="/events" element={<Events />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/join" element={<JoinNowPage />} />
             <Route path="/developers" element={<Developers />} />
           </Routes>
         </div>

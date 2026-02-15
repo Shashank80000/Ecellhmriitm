@@ -1,5 +1,6 @@
 import './Hero.css';
 import Marquee from '../Marquee/Marquee';
+import DecryptedText from '../DecryptedText/DecryptedText';
 
 const Hero = () => {
   return (
@@ -11,27 +12,43 @@ const Hero = () => {
           </span>
           <div className="hero__countdown-grid" aria-label="Countdown">
             <div className="hero__countdown-cell">
+              <span className="hero__countdown-label">DAYS</span>
               <span className="hero__countdown-value">00</span>
-              <span className="hero__countdown-label">Days</span>
             </div>
             <div className="hero__countdown-cell">
+              <span className="hero__countdown-label">HRS</span>
               <span className="hero__countdown-value">00</span>
-              <span className="hero__countdown-label">Hrs</span>
             </div>
             <div className="hero__countdown-cell">
+              <span className="hero__countdown-label">MTH</span>
               <span className="hero__countdown-value">00</span>
-              <span className="hero__countdown-label">Min</span>
             </div>
             <div className="hero__countdown-cell">
+              <span className="hero__countdown-label">SEC</span>
               <span className="hero__countdown-value">00</span>
-              <span className="hero__countdown-label">Sec</span>
             </div>
           </div>
         </div>
 
         <h1 className="hero__title">
-          Entrepreneurship Cell
-          <span>HMRITM</span>
+          <DecryptedText
+            text="Entrepreneurship Cell"
+            speed={40}
+            maxIterations={10}
+            animateOn="view"
+            sequential
+            revealDirection="start"
+          />
+          <span>
+            <DecryptedText
+              text="HMRITM"
+              speed={40}
+              maxIterations={10}
+              animateOn="view"
+              sequential
+              revealDirection="start"
+            />
+          </span>
         </h1>
 
         <p className="hero__subtitle">Fostering Innovation &amp; Entrepreneurship</p>

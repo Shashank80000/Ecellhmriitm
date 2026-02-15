@@ -55,14 +55,6 @@ const Navbar = () => {
             className={({ isActive }) =>
               isActive ? 'navbar__link navbar__link--active' : 'navbar__link'
             }
-            to="/startups"
-          >
-            Startups
-          </NavLink>
-          <NavLink
-            className={({ isActive }) =>
-              isActive ? 'navbar__link navbar__link--active' : 'navbar__link'
-            }
             to="/events"
           >
             Events

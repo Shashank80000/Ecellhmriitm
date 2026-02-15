@@ -1,0 +1,222 @@
+.join-now {
+  padding: 100px 24px;
+  position: relative;
+  z-index: 1;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.join-now__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, rgba(30, 215, 96, 0.08), rgba(0, 0, 0, 0.5));
+  border: 1px solid rgba(30, 215, 96, 0.3);
+  border-radius: 32px;
+  padding: 60px 48px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.join-now__content {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.join-now__header {
+  text-align: center;
+}
+
+.join-now__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 12px;
+}
+
+.join-now__title {
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 700;
+  margin: 0 0 16px;
+  color: #1ed760;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.join-now__lead {
+  font-size: clamp(16px, 2vw, 18px);
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.join-now__benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+}
+
+.join-now__benefit {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 32px 28px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.join-now__benefit:hover {
+  transform: translateY(-6px);
+  border-color: rgba(30, 215, 96, 0.5);
+  box-shadow: 0 12px 40px rgba(30, 215, 96, 0.15);
+}
+
+.join-now__benefit-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.join-now__benefit-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 12px;
+  color: #fff;
+}
+
+.join-now__benefit-text {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.join-now__cta {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.join-now__button {
+  text-decoration: none;
+  padding: 16px 36px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: clamp(15px, 2vw, 17px);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.join-now__button--primary {
+  background: #1ed760;
+  color: #000;
+  border: 1px solid #1ed760;
+  box-shadow: 0 0 30px rgba(30, 215, 96, 0.4);
+}
+
+.join-now__button--primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 40px rgba(30, 215, 96, 0.6);
+}
+
+.join-now__button--secondary {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.join-now__button--secondary:hover {
+  border-color: #1ed760;
+  color: #1ed760;
+  transform: translateY(-3px);
+}
+
+.join-now__stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 24px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.join-now__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.join-now__stat-value {
+  font-size: clamp(32px, 5vw, 44px);
+  font-weight: 700;
+  color: #1ed760;
+  text-shadow: 0 0 20px rgba(30, 215, 96, 0.3);
+}
+
+.join-now__stat-label {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .join-now {
+    padding: 80px 24px;
+  }
+
+  .join-now__inner {
+    padding: 48px 32px;
+  }
+
+  .join-now__benefits {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .join-now {
+    padding: 60px 20px;
+  }
+
+  .join-now__inner {
+    padding: 36px 24px;
+    border-radius: 24px;
+  }
+
+  .join-now__content {
+    gap: 36px;
+  }
+
+  .join-now__header {
+    text-align: left;
+  }
+
+  .join-now__lead {
+    margin: 0;
+  }
+
+  .join-now__benefits {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .join-now__benefit {
+    padding: 28px 24px;
+  }
+
+  .join-now__cta {
+    flex-direction: column;
+  }
+
+  .join-now__button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .join-now__stats {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}

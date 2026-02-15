@@ -3,6 +3,7 @@ import Hero from '../Hero/Hero';
 
 import Impact from '../Impact/Impact';
 import Initiatives from '../Initiatives/Initiatives';
+import JoinNow from '../JoinNow/JoinNow';
 import Cubes from '../Cubeanimation/Cubes';
 import Footer from '../Footer/Footer';
 
@@ -15,9 +16,7 @@ const Home = () => {
       
       <Initiatives />
 
-      <section className="join-now">
-        <div className="join-now__inner">Join Now</div>
-      </section>
+      <JoinNow />
 
       <section className="home__cubes" aria-label="Interactive cubes">
         <div className="home__cubes-inner">

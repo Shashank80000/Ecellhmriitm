@@ -49,41 +49,14 @@
   width: min(420px, 80vw);
 }
 
-.join-now {
-  padding: 80px 24px;
-  display: flex;
-  justify-content: center;
-}
-
-.join-now__inner {
-  width: 100%;
-  max-width: 1100px;
-  padding: 48px;
-  border-radius: 24px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  text-align: center;
-  font-size: clamp(22px, 4vw, 36px);
-  color: #fff;
-  font-family: 'Space Grotesk', sans-serif;
-}
-
 @media (max-width: 640px) {
-  .join-now {
-    padding: 60px 20px;
-  }
-
-  .join-now__inner {
-    padding: 32px 24px;
-  }
-
   .home__cubes-stage {
     padding: 16px;
   }
 }
 
 @media (max-width: 480px) {
-  .join-now__inner {
-    padding: 24px 18px;
+  .home__cubes {
+    padding: 60px 20px;
   }
 }

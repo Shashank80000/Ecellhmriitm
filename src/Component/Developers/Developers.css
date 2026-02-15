@@ -4,12 +4,17 @@
   font-family: 'Space Grotesk', sans-serif;
 }
 
-.simple-page__inner {
-  max-width: 900px;
+.developers__inner {
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-.simple-page__eyebrow {
+.developers__header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.developers__eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.24em;
   font-size: 12px;
@@ -17,16 +22,94 @@
   margin-bottom: 12px;
 }
 
-.simple-page__title {
-  font-size: clamp(28px, 4vw, 46px);
+.developers__title {
+  font-size: clamp(28px, 4vw, 44px);
   margin: 0 0 12px;
   letter-spacing: -0.02em;
 }
 
-.simple-page__text {
-  font-size: 16px;
-  line-height: 1.7;
+.developers__lead {
+  max-width: 760px;
+  margin: 0 auto;
   color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+}
+
+.developers__card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.developer-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  padding: 32px 28px 28px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  max-width: 280px;
+  width: 100%;
+}
+
+.developer-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.developer-card__avatar {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 20px;
+  border: 3px solid rgba(30, 215, 96, 0.5);
+}
+
+.developer-card__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.developer-card__name {
+  margin: 0 0 6px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.developer-card__title {
+  margin: 0 0 20px;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.developer-card__social {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.developer-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(30, 215, 96, 0.1);
+  color: #1ed760;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.developer-card__icon:hover {
+  background: #1ed760;
+  color: #000;
+  transform: translateY(-2px);
 }
 
 @media (max-width: 900px) {

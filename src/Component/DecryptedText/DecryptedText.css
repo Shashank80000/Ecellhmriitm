@@ -1,0 +1,23 @@
+.decrypted-text {
+  display: inline-block;
+  font-family: 'Space Grotesk', monospace;
+  cursor: default;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+.decrypted-text__content {
+  display: inline-block;
+  transition: opacity 0.3s ease;
+  max-width: 100%;
+}
+
+.decrypted-text__content.encrypted {
+  opacity: 0.8;
+}
+
+@media (max-width: 640px) {
+  .decrypted-text {
+    word-break: break-word;
+  }
+}
