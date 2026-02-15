@@ -39,9 +39,8 @@ const Footer = () => {
           <div className="footer__location">
             <p className="footer__address">
               <span className="footer__location-icon">📍</span>
-              Tech Park, SRM Institute of Science & Technology<br />
-              SRM Nagar, Kattankulathur<br />
-              Tamil Nadu (603202), India
+             Plot No, 326, Bakoli HMRITM Rd, Hamidpur, New Delhi, Delhi, 110036, India<br />
+             
             </p>
           </div>
         </div>
