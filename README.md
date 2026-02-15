@@ -1,4 +1,4 @@
-# E-Cell SRMIST Website
+# E-Cell HMRITM Website
 https://ecellhmriitm.vercel.app/
 
 A modern, responsive website for the Entrepreneurship Cell at SRM Institute of Science and Technology. Built with React and Vite, featuring animated hero, marquee, cubes background, and rich section layouts.

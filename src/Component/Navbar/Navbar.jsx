@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,6 +14,10 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
 
   return (
     <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
@@ -25,13 +30,31 @@ const Navbar = () => {
           </span>
         </a>
 
-        <nav className="navbar__links" aria-label="Primary">
+        <button
+          className={`navbar__toggle ${menuOpen ? 'navbar__toggle--open' : ''}`}
+          type="button"
+          aria-label="Toggle navigation"
+          aria-expanded={menuOpen}
+          aria-controls="primary-navigation"
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          <span className="navbar__toggle-bar" />
+          <span className="navbar__toggle-bar" />
+          <span className="navbar__toggle-bar" />
+        </button>
+
+        <nav
+          id="primary-navigation"
+          className={`navbar__links ${menuOpen ? 'navbar__links--open' : ''}`}
+          aria-label="Primary"
+        >
           <NavLink
             className={({ isActive }) =>
               isActive ? 'navbar__link navbar__link--active' : 'navbar__link'
             }
             end
             to="/"
+            onClick={closeMenu}
           >
             Home
           </NavLink>
@@ -40,6 +63,7 @@ const Navbar = () => {
               isActive ? 'navbar__link navbar__link--active' : 'navbar__link'
             }
             to="/about"
+            onClick={closeMenu}
           >
             About
           </NavLink>
@@ -48,6 +72,7 @@ const Navbar = () => {
               isActive ? 'navbar__link navbar__link--active' : 'navbar__link'
             }
             to="/team"
+            onClick={closeMenu}
           >
             Team
           </NavLink>
@@ -56,6 +81,7 @@ const Navbar = () => {
               isActive ? 'navbar__link navbar__link--active' : 'navbar__link'
             }
             to="/events"
+            onClick={closeMenu}
           >
             Events
           </NavLink>
@@ -64,6 +90,7 @@ const Navbar = () => {
               isActive ? 'navbar__link navbar__link--active' : 'navbar__link'
             }
             to="/contact"
+            onClick={closeMenu}
           >
             Contact
           </NavLink>
@@ -72,6 +99,7 @@ const Navbar = () => {
               isActive ? 'navbar__link navbar__link--active' : 'navbar__link'
             }
             to="/join"
+            onClick={closeMenu}
           >
             Join Now
           </NavLink>
@@ -80,6 +108,7 @@ const Navbar = () => {
               isActive ? 'navbar__link navbar__link--active' : 'navbar__link'
             }
             to="/developers"
+            onClick={closeMenu}
           >
             Developers
           </NavLink>
