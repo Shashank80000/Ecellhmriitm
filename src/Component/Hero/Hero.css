@@ -165,6 +165,8 @@
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 60px;
+  width: 100%;
+  max-width: 560px;
 }
 
 .hero__button {
@@ -177,6 +179,8 @@
   align-items: center;
   gap: 12px;
   font-size: clamp(16px, 2.5vw, 20px);
+  line-height: 1.1;
+  white-space: nowrap;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -247,12 +251,13 @@
   }
 
   .hero__actions {
-    gap: 16px;
-    margin-bottom: 40px;
+    gap: 12px;
+    margin-bottom: 36px;
   }
 
   .hero__button {
-    padding: 16px 28px;
+    padding: 14px 20px;
+    font-size: 15px;
   }
 }
 
@@ -292,14 +297,29 @@
   .hero__actions {
     flex-direction: column;
     width: 100%;
+    max-width: 360px;
   }
 
   .hero__button {
     width: 100%;
     justify-content: center;
+    padding: 12px 16px;
+    font-size: 14px;
+    letter-spacing: 0.6px;
   }
 
   .hero__tagline {
     margin-bottom: 36px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero__actions {
+    max-width: 320px;
+  }
+
+  .hero__button {
+    padding: 10px 14px;
+    font-size: 13px;
   }
 }
